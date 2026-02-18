@@ -9,9 +9,9 @@ interface MarkdownRendererProps {
 
 export function MarkdownRenderer({ content, className }: MarkdownRendererProps) {
   return (
+    <div className={cn("prose prose-invert prose-sm max-w-none", className)}>
     <Markdown
       remarkPlugins={[remarkGfm]}
-      className={cn("prose prose-invert prose-sm max-w-none", className)}
       components={{
         h1: ({ children }) => <h1 className="mb-3 mt-4 text-lg font-bold text-primary">{children}</h1>,
         h2: ({ children }) => <h2 className="mb-2 mt-3 text-base font-semibold text-primary">{children}</h2>,
@@ -58,5 +58,6 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
     >
       {content}
     </Markdown>
+    </div>
   )
 }

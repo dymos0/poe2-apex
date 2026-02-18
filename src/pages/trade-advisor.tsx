@@ -3,7 +3,7 @@ import {
   ArrowLeftRight, Sparkles, Plus, Trash2, Search, X,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
@@ -25,7 +25,6 @@ export function TradeAdvisor() {
   const searches = useStore((s) => s.searches)
   const addSearch = useStore((s) => s.addSearch)
   const deleteSearch = useStore((s) => s.deleteSearch)
-  const updateSearch = useStore((s) => s.updateSearch)
   const activeSearchId = useStore((s) => s.activeSearchId)
   const setActiveSearch = useStore((s) => s.setActiveSearch)
 

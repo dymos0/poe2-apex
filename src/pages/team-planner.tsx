@@ -3,7 +3,7 @@ import {
   Users, Sparkles, Plus, Trash2, UserPlus, X, Edit2, Check,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
@@ -13,7 +13,7 @@ import { usePageContext } from "@/hooks/use-page-context"
 import { useAiChat } from "@/hooks/use-ai-chat"
 import { useStore } from "@/stores"
 import type { Team, TeamMember, TeamRole, POE2Class } from "@/lib/types"
-import { TEAM_ROLES, CLASSES, CLASS_ASCENDANCIES } from "@/lib/constants"
+import { TEAM_ROLES, CLASSES } from "@/lib/constants"
 
 export function TeamPlanner() {
   const { askAi } = useAiChat()
