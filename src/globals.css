@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+}
+
+@theme inline {
+  --color-background: oklch(0.145 0.02 260);
+  --color-foreground: oklch(0.9 0.02 260);
+  --color-card: oklch(0.18 0.02 260);
+  --color-card-foreground: oklch(0.9 0.02 260);
+  --color-popover: oklch(0.18 0.02 260);
+  --color-popover-foreground: oklch(0.9 0.02 260);
+  --color-primary: oklch(0.75 0.15 75);
+  --color-primary-foreground: oklch(0.15 0.02 260);
+  --color-secondary: oklch(0.25 0.02 260);
+  --color-secondary-foreground: oklch(0.9 0.02 260);
+  --color-muted: oklch(0.22 0.02 260);
+  --color-muted-foreground: oklch(0.6 0.02 260);
+  --color-accent: oklch(0.25 0.02 260);
+  --color-accent-foreground: oklch(0.9 0.02 260);
+  --color-destructive: oklch(0.55 0.2 25);
+  --color-destructive-foreground: oklch(0.98 0 0);
+  --color-border: oklch(0.28 0.02 260);
+  --color-input: oklch(0.28 0.02 260);
+  --color-ring: oklch(0.75 0.15 75);
+  --color-chart-1: oklch(0.75 0.15 75);
+  --color-chart-2: oklch(0.6 0.15 200);
+  --color-chart-3: oklch(0.55 0.2 25);
+  --color-chart-4: oklch(0.65 0.15 150);
+  --color-chart-5: oklch(0.6 0.15 280);
+
+  /* Sidebar */
+  --color-sidebar: oklch(0.16 0.02 260);
+  --color-sidebar-foreground: oklch(0.9 0.02 260);
+  --color-sidebar-primary: oklch(0.75 0.15 75);
+  --color-sidebar-primary-foreground: oklch(0.15 0.02 260);
+  --color-sidebar-accent: oklch(0.22 0.02 260);
+  --color-sidebar-accent-foreground: oklch(0.9 0.02 260);
+  --color-sidebar-border: oklch(0.25 0.02 260);
+  --color-sidebar-ring: oklch(0.75 0.15 75);
+
+  /* POE2 Rarity Colors */
+  --color-rarity-normal: oklch(0.75 0.01 260);
+  --color-rarity-magic: oklch(0.65 0.15 250);
+  --color-rarity-rare: oklch(0.78 0.15 85);
+  --color-rarity-unique: oklch(0.7 0.18 50);
+  --color-rarity-currency: oklch(0.75 0.1 75);
+  --color-rarity-gem: oklch(0.65 0.12 170);
+
+  /* Defense Layer Colors */
+  --color-defense-life: oklch(0.6 0.2 25);
+  --color-defense-es: oklch(0.6 0.15 250);
+  --color-defense-armour: oklch(0.6 0.12 60);
+  --color-defense-evasion: oklch(0.6 0.12 170);
+
+  /* Damage Type Colors */
+  --color-dmg-physical: oklch(0.7 0.03 60);
+  --color-dmg-fire: oklch(0.65 0.2 35);
+  --color-dmg-cold: oklch(0.7 0.12 230);
+  --color-dmg-lightning: oklch(0.8 0.15 90);
+  --color-dmg-chaos: oklch(0.6 0.15 300);
+
+  /* Status Colors */
+  --color-status-safe: oklch(0.6 0.15 150);
+  --color-status-warning: oklch(0.7 0.18 75);
+  --color-status-danger: oklch(0.55 0.2 25);
+
+  --radius-lg: 0.5rem;
+  --radius-md: calc(var(--radius-lg) - 2px);
+  --radius-sm: calc(var(--radius-lg) - 4px);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-sans);
+}
+
+* {
+  @apply border-border;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.3 0.02 260);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.35 0.02 260);
+}
+
+
